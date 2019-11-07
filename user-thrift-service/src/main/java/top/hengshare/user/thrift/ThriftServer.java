@@ -10,6 +10,8 @@ import org.apache.thrift.transport.TTransportException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 import top.hengshare.thrift.user.UserService;
 
 import javax.annotation.PostConstruct;
@@ -20,7 +22,7 @@ import javax.annotation.PostConstruct;
  * @author: StivenYang
  * @create: 2019-11-07 21:37
  **/
-@Configurable
+@Component
 public class ThriftServer {
 
     @Value("${server.port}")
@@ -39,7 +41,6 @@ public class ThriftServer {
         } catch (TTransportException e) {
             e.printStackTrace();
         }
-
         TNonblockingServer.Args args = new TNonblockingServer.Args(socket);
         args.processor(processor);
         args.transportFactory(new TFramedTransport.Factory());

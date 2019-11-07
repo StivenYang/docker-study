@@ -1,6 +1,5 @@
 package top.hengshare.user.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -14,7 +13,7 @@ import top.hengshare.thrift.user.UserInfo;
  * @create: 2019-11-07 13:57
  **/
 @Mapper
-public interface UserMapper extends BaseMapper<UserInfo> {
+public interface UserMapper{
 
     @Select("select id, username, password, real_name as realName, mobile, email" +
             " from tb_user where id = #{id}")
