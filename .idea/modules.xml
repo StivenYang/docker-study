@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/message-thrift-python-service/message-thrift-python-service.iml" filepath="$PROJECT_DIR$/message-thrift-python-service/message-thrift-python-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/message-thrift-python-service-api/message-thrift-python-service-api.iml" filepath="$PROJECT_DIR$/message-thrift-python-service-api/message-thrift-python-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/micro-service.iml" filepath="$PROJECT_DIR$/micro-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-edge-service/user-edge-service.iml" filepath="$PROJECT_DIR$/user-edge-service/user-edge-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-thrift-service/user-thrift-service.iml" filepath="$PROJECT_DIR$/user-thrift-service/user-thrift-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-thrift-service-api/user-thrift-service-api.iml" filepath="$PROJECT_DIR$/user-thrift-service-api/user-thrift-service-api.iml" />
     </modules>

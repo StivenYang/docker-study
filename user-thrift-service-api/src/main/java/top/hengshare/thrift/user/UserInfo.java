@@ -109,17 +109,17 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
   public static final java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
   static {
     java.util.Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new java.util.EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
-    tmpMap.put(_Fields.ID, new org.apache.thrift.meta_data.FieldMetaData("id", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+    tmpMap.put(_Fields.ID, new org.apache.thrift.meta_data.FieldMetaData("id", org.apache.thrift.TFieldRequirementType.DEFAULT,
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
-    tmpMap.put(_Fields.USERNAME, new org.apache.thrift.meta_data.FieldMetaData("username", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+    tmpMap.put(_Fields.USERNAME, new org.apache.thrift.meta_data.FieldMetaData("username", org.apache.thrift.TFieldRequirementType.DEFAULT,
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-    tmpMap.put(_Fields.PASSWORD, new org.apache.thrift.meta_data.FieldMetaData("password", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+    tmpMap.put(_Fields.PASSWORD, new org.apache.thrift.meta_data.FieldMetaData("password", org.apache.thrift.TFieldRequirementType.DEFAULT,
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-    tmpMap.put(_Fields.REALNAME, new org.apache.thrift.meta_data.FieldMetaData("realname", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+    tmpMap.put(_Fields.REALNAME, new org.apache.thrift.meta_data.FieldMetaData("realname", org.apache.thrift.TFieldRequirementType.DEFAULT,
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-    tmpMap.put(_Fields.MOBILE, new org.apache.thrift.meta_data.FieldMetaData("mobile", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+    tmpMap.put(_Fields.MOBILE, new org.apache.thrift.meta_data.FieldMetaData("mobile", org.apache.thrift.TFieldRequirementType.DEFAULT,
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-    tmpMap.put(_Fields.EMAIL, new org.apache.thrift.meta_data.FieldMetaData("email", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+    tmpMap.put(_Fields.EMAIL, new org.apache.thrift.meta_data.FieldMetaData("email", org.apache.thrift.TFieldRequirementType.DEFAULT,
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
     metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
     org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(UserInfo.class, metaDataMap);
@@ -707,7 +707,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
       while (true)
       {
         schemeField = iprot.readFieldBegin();
-        if (schemeField.type == org.apache.thrift.protocol.TType.STOP) { 
+        if (schemeField.type == org.apache.thrift.protocol.TType.STOP) {
           break;
         }
         switch (schemeField.id) {
@@ -715,7 +715,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
             if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
               struct.id = iprot.readI32();
               struct.setIdIsSet(true);
-            } else { 
+            } else {
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
@@ -723,7 +723,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
             if (schemeField.type == org.apache.thrift.protocol.TType.STRING) {
               struct.username = iprot.readString();
               struct.setUsernameIsSet(true);
-            } else { 
+            } else {
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
@@ -731,7 +731,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
             if (schemeField.type == org.apache.thrift.protocol.TType.STRING) {
               struct.password = iprot.readString();
               struct.setPasswordIsSet(true);
-            } else { 
+            } else {
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
@@ -739,7 +739,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
             if (schemeField.type == org.apache.thrift.protocol.TType.STRING) {
               struct.realname = iprot.readString();
               struct.setRealnameIsSet(true);
-            } else { 
+            } else {
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
@@ -747,7 +747,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
             if (schemeField.type == org.apache.thrift.protocol.TType.STRING) {
               struct.mobile = iprot.readString();
               struct.setMobileIsSet(true);
-            } else { 
+            } else {
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
@@ -755,7 +755,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
             if (schemeField.type == org.apache.thrift.protocol.TType.STRING) {
               struct.email = iprot.readString();
               struct.setEmailIsSet(true);
-            } else { 
+            } else {
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
