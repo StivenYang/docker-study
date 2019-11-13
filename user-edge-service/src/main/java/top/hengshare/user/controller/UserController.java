@@ -2,12 +2,18 @@ package top.hengshare.user.controller;
 
 import org.apache.thrift.TException;
 import org.apache.tomcat.util.buf.HexUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import top.hengshare.thrift.user.UserInfo;
+import top.hengshare.user.config.RedisConfig;
+import top.hengshare.user.dto.UserDTO;
+import top.hengshare.user.response.LoginResponse;
 import top.hengshare.user.response.Response;
 import top.hengshare.user.thrift.ThriftProvider;
 
@@ -27,6 +33,8 @@ public class UserController {
 
     @Autowired
     private ThriftProvider provider;
+    @Autowired
+    private RedisConfig redisConfig;
 
     @PostMapping("login")
     public Response login(@RequestParam("username") String username,
@@ -50,10 +58,16 @@ public class UserController {
         String token = genToken();
 
         //3. 缓存用户
+        redisConfig.redisTemplate(new RedisConfig().redisConnectionFactory()).opsForValue().set(token, toDTO(userInfo), 3600);
 
+        //4. 返回用户token
+        return new LoginResponse(token);
+    }
 
-        //4.
-        return null;
+    private UserDTO toDTO(UserInfo userInfo) {
+        UserDTO userDTO = new UserDTO();
+        BeanUtils.copyProperties(userInfo, userDTO);
+        return userDTO;
     }
 
     private String genToken() {

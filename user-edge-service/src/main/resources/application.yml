@@ -1,12 +1,15 @@
 server:
   port: 8082
 
+
 thrift:
   user:
     ip: 127.0.0.1
     port: 7911
 
 spring:
+  application:
+    name: user-edge-service
   redis:
     #数据库主机
     host: 127.0.0.1
@@ -29,5 +32,6 @@ spring:
   cache:
     redis:
       # 设置缓存默认超过期时间为30秒
-      time-to-live: 30s
+      time-to-live: 30
+
 

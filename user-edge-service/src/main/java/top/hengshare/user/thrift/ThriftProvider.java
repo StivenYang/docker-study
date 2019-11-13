@@ -28,7 +28,7 @@ public class ThriftProvider {
     public UserService.Client getUserService() {
 
         //初始化服务器ip和端口
-        TSocket socket = new TSocket(serverIp, serverPort, 3000);
+        TSocket socket = new TSocket(serverIp, serverPort, 30000);
         //初始化传输层
         TTransport transport  = new TFramedTransport(socket);
         //打开传输层
